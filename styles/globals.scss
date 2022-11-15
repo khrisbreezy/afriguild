@@ -1,0 +1,250 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+nav.navbar {
+  padding: 20px 70px;
+  background: #24272C;
+  width: 100%;
+  z-index: 4;
+
+  @media only screen and (max-width: 768px) {
+    padding: 6px 12px;
+  }
+
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+
+  ul.navbar-nav {
+    flex-direction: row;
+    flex-wrap: inherit;
+    align-items: center;
+    padding-left: 1rem;
+
+    @media only screen and (max-width: 992px) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 0;
+    }
+
+    li.nav-item {
+      margin-right: 2rem;
+
+      @media only screen and (max-width: 992px) {
+        margin-bottom: 1rem;
+        margin-right: 0;
+      }
+
+      .search {
+        background: #24272C;
+        padding: 9px 11px 9px 12px;
+        border-radius: 21px;
+        box-shadow: 0px 2px 0px #333 inset, 0px 0px 8px #222 inset;
+
+        input {
+          border: 0;
+          background: #24272C;
+          outline: none;
+          width: 220px;
+          margin-left: 10px;
+          font-size: 14px;
+        }
+      }
+
+      .nav-link {
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: #fff;
+      }
+
+      .active {
+        color: #F4068F;
+      }
+
+      .profile-name {
+        color: #fff;
+        margin-bottom: 0;
+        margin-right: 5px;
+      }
+
+    }
+
+  }
+
+  .navbar-toggler {
+    outline: none;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    .navbar-toggler-icon {
+      width: auto;
+      height: 18px;
+      content: none;
+    }
+  }
+
+
+
+}
+
+nav.navbar-expand-lg {
+  @media (min-width: 992px) {
+    flex-wrap: wrap;
+  }
+}
+
+section {
+
+  h1, h2, h3, .ranking-content {
+    color: #fff;
+  }
+
+  &.leaderboard {
+    background: #24272C;
+    padding: 50px 0;
+    height: 800px;
+    margin-bottom: 800px;
+
+    @media (max-width: 567px) {
+      margin-bottom: 700px;
+    }
+
+    .leader-grid {
+      grid-gap: 16px;
+      display: grid !important;
+      grid-auto-columns: minmax(160px,1fr);
+      grid-auto-flow: column;
+      grid-template-columns: repeat(auto-fill,minmax(160px,1fr));
+      overflow-x: auto;
+
+      @media (max-width: 992px) {
+        grid-gap: 1px;
+      }
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      
+      
+    }
+
+    .leaderboard-header {
+      img {
+        @media (max-width: 567px) {
+          width: 100%;
+        }
+      }
+    }
+
+  
+    h2 {
+      font-size: 25px;
+      margin-top: 25px;
+    }
+  
+    .side-leader-board {
+      background: #1E1C1E;
+      height: 700px;
+      width: auto;
+      border-radius: 10px;
+    }
+  
+    .liveRanking {
+      margin-top: 50px;
+      background-color: #1E1C1E;
+      padding: 40px;
+      border: double 4px transparent;
+      border-radius: 15px;
+      background-image: linear-gradient(#1E1C1E, #1E1C1E), radial-gradient(circle at top left, #F4068F,#999999, #F4068F);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 0;
+     
+      .ranking-sect {
+        border-bottom: 1px solid #fff;
+        padding-bottom: 5px;
+      }
+  
+      .tabs {
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: rgba(244, 6, 143, 0.5);
+      }
+  
+      button.tab-list {
+        background-color: rgba(244, 6, 143, 0.1);
+        outline: none;
+        border: none;
+        padding: 10px 26px;
+        font-size: 12px;
+
+        @media (max-width: 567px) {
+          padding: 10px 20px
+        }
+        
+  
+      }
+  
+      button.active {
+        border-radius: 10px;
+        background-color: #f4068f;
+      }
+
+      p {
+        font-weight: 100;
+        font-size: 15px;
+      }
+
+      p.bold {
+        font-weight: bold;
+      }
+
+      button.see-ranking {
+        color: #f4068f;
+        background-color: transparent;
+        border: 1px solid #f4068f;
+        border-radius: 20px;
+        padding: 8px 15px;
+        margin-top: 15px;
+      }
+
+      .ranking-scroll {
+        height: 800px;
+        overflow-y: scroll;
+      }
+  
+    }
+  }
+}
+
+
+

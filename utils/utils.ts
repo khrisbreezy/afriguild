@@ -1,0 +1,1 @@
+export const composeStrings = (...args: string[]): string => args.filter(i => i).join(' ')

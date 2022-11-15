@@ -1,0 +1,50 @@
+.name {
+    color: #fff;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.leaderCard {
+    margin-top: 40px;
+    text-align: center;
+
+    img {
+        border: 3px solid #F4068F;
+        border-radius: 50%;
+    }
+    
+    &:not(:last-child) {
+        padding: 0;
+    }
+
+    .point {
+        color: #fff;
+        font-weight: 100;
+        font-size: 12px;
+        position: relative;
+
+        &::before {
+            content: "";
+            background: #F4068F;
+            position: absolute;
+            top: 7px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            left: 5px;
+        }
+    
+        &::after {
+            content: "";
+            background: #F4068F;
+            position: absolute;
+            top: 7px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            right: 5px;
+        }
+    }
+
+}
